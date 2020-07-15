@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Персона - салон красоты</title>
 </head>
 <body>
     <header class="header">
-        <div class="central-container">
-            <button class="header__burger-btn"></button>
-            <address class="header__burger">
-                <ul class="header__links-list">
+        <div class="central-container header__container">
+            <button class="header__burger-btn burger-btn">
+                <span class="burger-btn__item"></span>
+            </button>
+            <address class="header__burger burger">
+                <ul class="burger__links-list">
                     <li>
                         <a class="header__link" href="#" target="_blank"></a>
                     </li>
@@ -20,10 +23,13 @@
                 </ul>
             </address>
 
-            <img src="" alt='Логотип салона красоты "Персона"' class="header__logo">
+            <!-- <img src="" alt='Логотип салона красоты "Персона"' class="header__logo"> -->
+            <div class="header__logo"></div>
 
-            <h1 class="header__title">Салон красоты «Персона»</h1>
-            <img class="header__picture" src="" alt="Портрет женщины крупным планом">
+            <h1 class="header__title">Салон красоты <span class="header__title--stylish">«Персона»</span></h1>
+            <div class="header__first-line"></div>
+            <div class="header__second-line"></div>
+            <img class="header__picture" src="./img/close-up-women.jpg" alt="Портрет женщины крупным планом">
 
             <button class="header__btn primary-btn">Записаться</button>
         </div>
