@@ -1,0 +1,137 @@
+.price {
+    margin-top: 100px;
+}
+
+.price__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: .6fr 3fr 3fr;
+
+    row-gap: 27px;
+    column-gap: 32px;
+
+    padding: 0 60px 0;
+}
+
+.price__title {
+    justify-self: start;
+    padding-left: 35px;
+    display: block;
+
+    line-height: 35px;
+    word-spacing: .18em;
+}
+
+.category {
+    position: relative;
+
+    perspective: 2000px;
+}
+
+.category_massage {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    justify-self: end;
+}
+
+.category_manicure {
+    justify-self: end;
+}
+
+.category_barbershop {
+    grid-row: 1 / 3;
+    grid-column: 2 / -1;
+
+    justify-self: start;
+}
+
+.category_pedicure {
+    justify-self: start;
+}
+
+.category__name {
+    position: absolute;
+    top: 0;
+
+    font-size: 20px;
+    font-weight: 300;
+    word-spacing: 0.20em;
+}
+
+.category__name_left {
+    left: 0;
+
+    transform: rotate(-90deg) translate(-100%, -33px);
+    transform-origin: left top;
+}
+
+.category__name_left::before {
+    position: absolute;
+    top:50%;
+    left:0;
+    content: '';
+    display:block;
+    width:130px;
+    height: 1px;
+    background-color: #000000;
+    transform: translate(-105%, -50%);
+}
+
+.category__name_right {
+    right: 0;
+
+    transform: rotate(90deg) translate(100%, -33px);
+    transform-origin: right top;
+}
+
+.category__name_right::before {
+    position: absolute;
+    top:50%;
+    right:0;
+    content: '';
+    display:block;
+    width:100px;
+    height: 1px;
+    background-color: #000000;
+    transform: translate(105%, -50%);
+}
+
+.card {
+    position: relative;
+
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    cursor: pointer;
+}
+
+.card__front,
+.card__back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotateY(-180deg);
+    background-color: #CEA5B4;
+}
+.card__cover {
+    display: block;
+
+    width: 100%;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.card_rotated {
+    transform: rotateY(180deg);
+}
